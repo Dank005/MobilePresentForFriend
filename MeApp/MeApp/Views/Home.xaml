@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeApp.Views.Home">
+
+    <Grid Padding="30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <CollectionView x:Name="presentList" Margin="0,40,0,0" Grid.Row="1" ItemsSource="{Binding Presents}" SelectionMode="Single"
+                        SelectedItem="{Binding SelectedPresent}" VerticalScrollBarVisibility="Never"
+                        SelectionChangedCommand="{Binding SelectionCommand}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="20" HorizontalItemSpacing="20" Span="2"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" BackgroundColor="#131313" WidthRequest="145" HeightRequest="160">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Aspect="AspectFill" Source="{Binding Image}" Margin="10" WidthRequest="125" HeightRequest="110"
+                               HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label Grid.Row="1" Text="{Binding Name}" TextColor="Black" HorizontalOptions="Start" VerticalOptions="End"/>
+                        <Label Grid.Row="1" Text="{Binding Price, StringFormat='${0}'}" TextColor="Black" HorizontalOptions="End" VerticalOptions="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
