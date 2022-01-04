@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MeApp.Views.Present">
+             x:Class="MeApp.Views.PresentPage">
     <ScrollView>
         <Grid RowDefinitions="Auto, Auto, Auto">
             <StackLayout Orientation="Vertical" Grid.Row="0">
@@ -24,15 +24,14 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid RowDefinitions="Auto, Auto, Auto">
-                                <Label Text="{Binding FirstName}" TextColor="Black"></Label>
-                                <Label Grid.Row="1" Text="{Binding LastName}" TextColor="Black"></Label>
-                                <Label Grid.Row="2" Text="{Binding Department}" TextColor="Black"></Label>
+                                <Label Text="{Binding Name}" TextColor="Black"></Label>
+                                <Label Grid.Row="1" Text="{Binding Description}" TextColor="Black"></Label>
+                                <Label Grid.Row="2" Text="{Binding Link}" TextColor="Black"></Label>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
         </Grid>
     </ScrollView>
 </ContentPage>

@@ -13,11 +13,12 @@
             <Color x:Key="ThemeColor">#EF3D55</Color>
             <Color x:Key="GrayColor">Gray</Color>
             <Color x:Key="BgColor">#F0F0F0</Color>
+            <Color x:Key="ColorPrimary">#2196F3</Color>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource BgColor}"/>
-                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource ThemeColor}"/>
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource ColorPrimary}"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource GrayColor}"/>
-                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource ThemeColor}"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource ColorPrimary}"/>
             </Style>
             <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}"/>
             <DataTemplate x:Key="MenuTemplate">
@@ -27,7 +28,7 @@
                 </StackLayout>
             </DataTemplate>
             <DataTemplate x:Key="FlyoutHeaderTemplate">
-                <ContentView BackgroundColor="{StaticResource ThemeColor}" HeightRequest="245">
+                <ContentView BackgroundColor="{StaticResource ColorPrimary}" HeightRequest="245">
                     <Image Source="Logo.png" WidthRequest="96" HeightRequest="96"
                        HorizontalOptions="Center" VerticalOptions="Center"/>
                 </ContentView>
@@ -39,8 +40,8 @@
         <Tab Title="Home" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate views:Home}"/>
         </Tab>
-        <Tab Title="Present" Icon="present.png">
-            <ShellContent ContentTemplate="{DataTemplate views:Present}"/>
+        <Tab Title="PresentPage" Icon="present.png">
+            <ShellContent ContentTemplate="{DataTemplate views:PresentPage}"/>
         </Tab>
         <Tab Title="Add" Icon="add.png">
             <ShellContent ContentTemplate="{DataTemplate views:AddNewPresent}"/>
@@ -52,8 +53,8 @@
             <ShellContent ContentTemplate="{DataTemplate views:Favourites}"/>
         </Tab>
     </FlyoutItem>
-    <MenuItem Text="Settings" IconImageSource=".png"/>
-    <MenuItem Text="Services" IconImageSource="article.png"/>
+    
+    <MenuItem Text="Settings" IconImageSource="settings.png"/>
     <MenuItem Text="Archive" IconImageSource="briefcase.png"/>
     
     <ShellContent Title="Sign Up" Icon="profile.png" ContentTemplate="{DataTemplate views:SignUp}"/>

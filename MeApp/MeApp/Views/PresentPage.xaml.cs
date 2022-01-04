@@ -12,11 +12,11 @@ using Xamarin.Forms.Xaml;
 namespace MeApp.Views
 {
     //[XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Present : ContentPage
+    public partial class PresentPage : ContentPage
     {
         SqlConnection sqlConnection;
 
-        public Present()
+        public PresentPage()
         {
             InitializeComponent();
             string connectionString = $"Data Source=sql.bsite.net\\MSSQL2016; Initial Catalog=danka0060_SampleDB; User ID=danka0060_SampleDB; Password=danka0060";
@@ -42,24 +42,23 @@ namespace MeApp.Views
         {
             try
             {
-                List<Office> myOffice = new List<Office>();
+                List<Present> presents = new List<Present>();
                 sqlConnection.Open();
-                string queryString = "Select * from dbo.People";
+                string queryString = "Select * from dbo.Presents";
                 SqlCommand cmd = new SqlCommand(queryString, sqlConnection);
                 SqlDataReader reader = cmd.ExecuteReader();
-
                 while (reader.Read())
                 {
-                    myOffice.Add(new Office
+                    presents.Add(new Present
                     {
-                        FirstName = reader["First Name"].ToString(),
-                        LastName = reader["Last Name"].ToString(),
-                        Department = reader["Department"].ToString()
+                        Name = reader["Name"].ToString(),
+                        Description = reader["Description"].ToString(),
+                        Link = reader["Link"].ToString()
                     });
                 }
                 reader.Close();
                 sqlConnection.Close();
-                MyListView.ItemsSource = myOffice;
+                MyListView.ItemsSource = presents;
             }
 
             catch (Exception ex)

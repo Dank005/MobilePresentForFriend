@@ -11635,91 +11635,91 @@ namespace MeApp.Droid
 			public const int add = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int article = 2131165277;
+			public const int avd_hide_password = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int avd_hide_password = 2131165278;
+			public const int avd_show_password = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int avd_show_password = 2131165279;
+			public const int Binoculars = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int Binoculars = 2131165280;
+			public const int briefcase = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int briefcase = 2131165281;
+			public const int btn_checkbox_checked_mtrl = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int btn_checkbox_checked_mtrl = 2131165282;
+			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165283;
+			public const int btn_checkbox_unchecked_mtrl = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int btn_checkbox_unchecked_mtrl = 2131165284;
+			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165285;
+			public const int btn_radio_off_mtrl = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int btn_radio_off_mtrl = 2131165286;
+			public const int btn_radio_off_to_on_mtrl_animation = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int btn_radio_off_to_on_mtrl_animation = 2131165287;
+			public const int btn_radio_on_mtrl = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int btn_radio_on_mtrl = 2131165288;
+			public const int btn_radio_on_to_off_mtrl_animation = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int btn_radio_on_to_off_mtrl_animation = 2131165289;
+			public const int chat = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int chat = 2131165290;
+			public const int dashboard = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int dashboard = 2131165291;
+			public const int design_bottom_navigation_item_background = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int design_bottom_navigation_item_background = 2131165292;
+			public const int design_fab_background = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int design_fab_background = 2131165293;
+			public const int design_ic_visibility = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int design_ic_visibility = 2131165294;
+			public const int design_ic_visibility_off = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int design_ic_visibility_off = 2131165295;
+			public const int design_password_eye = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int design_password_eye = 2131165296;
+			public const int design_snackbar_background = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int design_snackbar_background = 2131165297;
+			public const int heart = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int heart = 2131165298;
+			public const int home = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int home = 2131165299;
+			public const int ic_mtrl_checked_circle = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int ic_mtrl_checked_circle = 2131165300;
+			public const int ic_mtrl_chip_checked_black = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int ic_mtrl_chip_checked_black = 2131165301;
+			public const int ic_mtrl_chip_checked_circle = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int ic_mtrl_chip_checked_circle = 2131165302;
+			public const int ic_mtrl_chip_close_circle = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int ic_mtrl_chip_close_circle = 2131165303;
+			public const int location = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int location = 2131165304;
+			public const int Logo = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int Logo = 2131165305;
+			public const int LogoBlue = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
 			public const int material_ic_calendar_black_24dp = 2131165306;
@@ -11830,19 +11830,16 @@ namespace MeApp.Droid
 			public const int profile = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int ProfilleImage = 2131165342;
+			public const int settings = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int settings = 2131165343;
+			public const int test_custom_background = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int test_custom_background = 2131165344;
+			public const int tooltip_frame_dark = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int tooltip_frame_dark = 2131165345;
-			
-			// aapt resource value: 0x7F0700A2
-			public const int tooltip_frame_light = 2131165346;
+			public const int tooltip_frame_light = 2131165345;
 			
 			static Drawable()
 			{
