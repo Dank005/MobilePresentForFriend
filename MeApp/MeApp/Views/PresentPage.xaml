@@ -13,7 +13,6 @@
             <Button Text="CheckConnection" Grid.Row="1" BackgroundColor="#2196F3" TextColor="White" Clicked="Button_Clicked"/>
 
             <Grid Grid.Row="2" RowDefinitions="Auto, Auto" ColumnDefinitions="*,*">
-                <Button Grid.Row="0" Grid.Column="0" Text="Get Oper" BackgroundColor="#2196F3" TextColor="White" x:Name="getButton" Clicked="getButton_Clicked"/>
                 <Button Grid.Row="0" Grid.Column="1" Text="Post Oper" BackgroundColor="#2196F3" TextColor="White" x:Name="postButton" Clicked="postButton_Clicked"/>
                 <Button Grid.Row="1" Grid.Column="0" Text="Update Oper" BackgroundColor="#2196F3" TextColor="White" x:Name="updateButton" Clicked="updateButton_Clicked"/>
                 <Button Grid.Row="1" Grid.Column="1" Text="Delete Oper" BackgroundColor="#2196F3" TextColor="White" x:Name="deleteButton" Clicked="deleteButton_Clicked"/>

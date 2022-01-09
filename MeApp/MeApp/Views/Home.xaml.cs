@@ -26,6 +26,7 @@ namespace MeApp.Views
         {
             string connectionString = $"Data Source=sql.bsite.net\\MSSQL2016; Initial Catalog=danka0060_SampleDB; User ID=danka0060_SampleDB; Password=danka0060";
             sqlConnection = new SqlConnection(connectionString);
+            
 
             try
             {
@@ -42,11 +43,12 @@ namespace MeApp.Views
                         Description = reader["Description"].ToString(),
                         Link = reader["Link"].ToString(),
                         Price = (float)reader["Price"],
-                        DataFiles = (byte[])reader["DataFiles"]
+                        DataFiles = (byte[])reader["DataFiles"],                  
                     });
                 }
                 reader.Close();
                 sqlConnection.Close();
+                //LoadImages(presents);
                 presentList.ItemsSource = presents;
             }
 
@@ -56,5 +58,15 @@ namespace MeApp.Views
                 throw;
             }
         }
+
+        //public void LoadImages(List<Present> presents)
+        //{
+        //    foreach(var present in presents)
+        //    {
+        //        present.ImagePresent = new Image();
+        //        Stream stream = new MemoryStream(present.DataFiles);
+        //        present.ImagePresent.Source = ImageSource.FromStream(() => { return stream; });
+        //    }
+        //}
     }
 }

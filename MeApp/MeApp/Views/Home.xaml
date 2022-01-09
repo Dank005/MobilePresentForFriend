@@ -23,7 +23,7 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Image x:Name="presentImage" Aspect="AspectFill" Source="photo.png" Margin="10" WidthRequest="130" HeightRequest="100"
+                        <Image x:Name="presentImage" Aspect="AspectFill" Source="{Binding ImagePresent}" Margin="10" WidthRequest="130" HeightRequest="100"
                                HorizontalOptions="Center" VerticalOptions="Center"/>
                         <Label Grid.Row="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="End"
                                HorizontalOptions="Start"/>

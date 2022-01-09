@@ -36,37 +36,7 @@ namespace MeApp.Views
                 Console.WriteLine(ex.Message);
                 throw;
             }
-        }
-
-        private async void getButton_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                List<Present> presents = new List<Present>();
-                sqlConnection.Open();
-                string queryString = "Select * from dbo.Presents";
-                SqlCommand cmd = new SqlCommand(queryString, sqlConnection);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    presents.Add(new Present
-                    {
-                        Name = reader["Name"].ToString(),
-                        Description = reader["Description"].ToString(),
-                        Link = reader["Link"].ToString()
-                    });
-                }
-                reader.Close();
-                sqlConnection.Close();
-                MyListView.ItemsSource = presents;
-            }
-
-            catch (Exception ex)
-            {
-                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "Ok");
-                throw;
-            }
-        }
+        }     
 
         private void postButton_Clicked(object sender, EventArgs e)
         {

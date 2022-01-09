@@ -2,11 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeApp.Views.AddNewPresent">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Add New Present Page!" FontSize="20"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <ScrollView>
+        <Grid RowDefinitions="Auto, Auto, Auto">
+            <StackLayout Orientation="Vertical" Grid.Row="0">
+                <Entry Placeholder="Entry Name" x:Name="Name"/>
+                <Entry Placeholder="Entry Description" x:Name="Description"/>
+                <Entry Placeholder="Entry Link" x:Name="Link"/>
+                <Entry Placeholder="Entry Price" x:Name="Price"/>
+                <Button Text="Post Oper" BackgroundColor="#2196F3" TextColor="White" x:Name="postButton" Clicked="postButton_Clicked"/>
+                <Button Text="Upload file" BackgroundColor="#2196F3" TextColor="White" x:Name="uploadfile" Clicked="uploadfile_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>
