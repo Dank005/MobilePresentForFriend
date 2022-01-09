@@ -36,13 +36,6 @@ namespace MeApp.Views
             try
             {
                 sqlConnection.Open();
-                //using (SqlCommand cmd = new SqlCommand("INSERT INTO dbo.People VALUES(@FirstName, @LastName, @Department)", sqlConnection))
-                //{
-                //    cmd.Parameters.Add(new SqlParameter("FirstName", Name.Text));
-                //    cmd.Parameters.Add(new SqlParameter("LastName", DBNull.Value));
-                //    cmd.Parameters.Add(new SqlParameter("Department", Convert.ToDouble(Link.Text)));
-                //    cmd.ExecuteNonQuery();
-                //}
 
                 using (SqlCommand cmd = new SqlCommand("INSERT INTO dbo.Presents VALUES(@Name, @Description, @Link, @Price, @UserID, @DataFiles)", sqlConnection))
                 {

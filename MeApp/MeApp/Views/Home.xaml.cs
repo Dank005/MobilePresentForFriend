@@ -59,14 +59,9 @@ namespace MeApp.Views
             }
         }
 
-        //public void LoadImages(List<Present> presents)
-        //{
-        //    foreach(var present in presents)
-        //    {
-        //        present.ImagePresent = new Image();
-        //        Stream stream = new MemoryStream(present.DataFiles);
-        //        present.ImagePresent.Source = ImageSource.FromStream(() => { return stream; });
-        //    }
-        //}
+        private async void moreButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new More());
+        }
     }
 }

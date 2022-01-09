@@ -2,35 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeApp.Views.PresentPage">
-    <ScrollView>
-        <Grid RowDefinitions="Auto, Auto, Auto">
-            <StackLayout Orientation="Vertical" Grid.Row="0">
-                <Entry Placeholder="Entry the First Name" x:Name="FirstName"/>
-                <Entry Placeholder="Entry the Last Name" x:Name="LastName"/>
-                <Entry Placeholder="Entry the Department" x:Name="Department"/>
-            </StackLayout>
-
-            <Button Text="CheckConnection" Grid.Row="1" BackgroundColor="#2196F3" TextColor="White" Clicked="Button_Clicked"/>
-
-            <Grid Grid.Row="2" RowDefinitions="Auto, Auto" ColumnDefinitions="*,*">
-                <Button Grid.Row="0" Grid.Column="1" Text="Post Oper" BackgroundColor="#2196F3" TextColor="White" x:Name="postButton" Clicked="postButton_Clicked"/>
-                <Button Grid.Row="1" Grid.Column="0" Text="Update Oper" BackgroundColor="#2196F3" TextColor="White" x:Name="updateButton" Clicked="updateButton_Clicked"/>
-                <Button Grid.Row="1" Grid.Column="1" Text="Delete Oper" BackgroundColor="#2196F3" TextColor="White" x:Name="deleteButton" Clicked="deleteButton_Clicked"/>
-            </Grid>
-
-            <ListView Grid.Row="3" x:Name="MyListView" HasUnevenRows="True" Footer="">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid RowDefinitions="Auto, Auto, Auto">
-                                <Label Text="{Binding Name}" TextColor="Black"></Label>
-                                <Label Grid.Row="1" Text="{Binding Description}" TextColor="Black"></Label>
-                                <Label Grid.Row="2" Text="{Binding Link}" TextColor="Black"></Label>
-                            </Grid>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </Grid>
-    </ScrollView>
+    <Grid Padding="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <CollectionView x:Name="myPresentList" ItemsSource="{Binding Presents}" SelectionMode="Single"
+                        SelectedItem="{Binding SelectedPresent}" VerticalScrollBarVisibility="Never"
+                        SelectionChangedCommand="{Binding SelectionCommand}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="5" HorizontalItemSpacing="5" Span="2"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout BackgroundColor="LightGray">
+                        <Label Padding="0, 10, 10, 0" Text="{Binding Price}" TextColor="Black" FontSize="17"
+                               VerticalOptions="End" HorizontalOptions="End"/>
+                        <Image x:Name="presentImage" Aspect="AspectFill" Source="Vacuum.png"
+                               HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label Padding="10, 0, 0, 0" Text="{Binding Name}" TextColor="Black" FontSize="21" VerticalOptions="End"
+                               HorizontalOptions="Start"/>
+                        <Label Padding="10, 0, 0, 0" Text="{Binding Description}" TextColor="Black" FontSize="15" VerticalOptions="End"
+                               HorizontalOptions="Start"/>
+                        <Grid Padding="10, 0, 0, 10" WidthRequest="60" HeightRequest="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Button x:Name="moreButton" Grid.Row="0" Grid.Column="0" Text="More" FontSize="10" HorizontalOptions="Start" WidthRequest="100" BackgroundColor="Gray" TextColor="White"/>
+                            <ImageButton x:Name="favourButton" Grid.Row="0" Grid.Column="1" Source="favorite_heart.png" HorizontalOptions="Center"/>
+                        </Grid>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 </ContentPage>

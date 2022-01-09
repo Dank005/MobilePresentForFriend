@@ -3,35 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeApp.Views.Home">
 
-    <Grid Padding="30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <CollectionView x:Name="presentList" Margin="0,5,0,0" Grid.Row="1" ItemsSource="{Binding Presents}" SelectionMode="Single"
+    <Grid Padding="25" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <CollectionView x:Name="presentList" ItemsSource="{Binding Presents}" SelectionMode="Single"
                         SelectedItem="{Binding SelectedPresent}" VerticalScrollBarVisibility="Never"
                         SelectionChangedCommand="{Binding SelectionCommand}">
             <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="20" HorizontalItemSpacing="5" Span="2"/>
+                <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="5" HorizontalItemSpacing="5" Span="2"/>
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10" BackgroundColor="AntiqueWhite" WidthRequest="60" HeightRequest="180">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Image x:Name="presentImage" Aspect="AspectFill" Source="{Binding ImagePresent}" Margin="10" WidthRequest="130" HeightRequest="100"
-                               HorizontalOptions="Center" VerticalOptions="Center"/>
-                        <Label Grid.Row="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="End"
-                               HorizontalOptions="Start"/>
-                        <Label Grid.Row="1" Text="{Binding Price}" TextColor="Black"
+                    <StackLayout BackgroundColor="LightGray">
+                        <Label Padding="0, 10, 10, 0" Text="{Binding Price}" TextColor="Black" FontSize="17"
                                VerticalOptions="End" HorizontalOptions="End"/>
-                        <Button Grid.Row="2" Text="To" HorizontalOptions="Start" WidthRequest="60" BackgroundColor="Gray" TextColor="White"/>
-                        <Button Grid.Row="2" Text="Do" HorizontalOptions="End" WidthRequest="60"  BackgroundColor="Gray" TextColor="White"/>
-                    </Grid>
+                        <Image x:Name="presentImage" Aspect="AspectFill" Source="Vacuum.png"
+                               HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label Padding="10, 0, 0, 0" Text="{Binding Name}" TextColor="Black" FontSize="21" VerticalOptions="End"
+                               HorizontalOptions="Start"/>
+                        <Label Padding="10, 0, 0, 0" Text="{Binding Description}" TextColor="Black" FontSize="15" VerticalOptions="End"
+                               HorizontalOptions="Start"/>
+                        <Grid Padding="10, 0, 0, 10" WidthRequest="60" HeightRequest="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Button x:Name="moreButton" Grid.Row="0" Grid.Column="0" Text="More" FontSize="10" HorizontalOptions="Start" WidthRequest="100" BackgroundColor="Gray" TextColor="White" Clicked="moreButton_Clicked"/>
+                            <ImageButton x:Name="favourButton" Grid.Row="0" Grid.Column="1" Source="favorite_heart.png" HorizontalOptions="Center"/>
+                        </Grid>
+                    </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

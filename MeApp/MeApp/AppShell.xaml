@@ -40,7 +40,7 @@
         <Tab Title="Home" Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate views:Home}"/>
         </Tab>
-        <Tab Title="PresentPage" Icon="present.png">
+        <Tab Title="My Presents" Icon="present.png">
             <ShellContent ContentTemplate="{DataTemplate views:PresentPage}"/>
         </Tab>
         <Tab Title="Add" Icon="add.png">
